@@ -27,6 +27,13 @@ jobs:
       - name: go build
         run: |
           go build main.go      
+      - name: git push
+        run: |
+          git config user.name "biningo"
+          git config user.email "biningo@yeah/net"
+          git add main
+          git commit -m "go build main"
+          git push
       - name: Push to GitHub Packages
         uses: docker/build-push-action@v2
         with:
