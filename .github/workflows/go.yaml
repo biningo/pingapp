@@ -26,13 +26,12 @@ jobs:
         run: go test -v .
       - name: go build
         run: |
-          rm -f main
           go build main.go      
       - name: git push
         run: |
           git config --global user.email "biningo@yeah.net"
           git config --global user.name "lyer"
-          git add main
+          git add .
           git commit -m "go build main"
           git push
       - name: Push to GitHub Packages
