@@ -37,8 +37,8 @@ jobs:
       - name: Push to GitHub Packages
         uses: docker/build-push-action@v2
         with:
-          username: ${{ github.actor }}
+          username: biningo
           password: ${{ secrets.DOCKER_PKG }}
           registry: docker.pkg.github.com
-          repository: biningo/test-go-app/test-go-app:1.0
-          tag_with_ref: true
+          repository: biningo/test-go-app/test-go-app
+          tag: 1.0
