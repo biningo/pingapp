@@ -9,7 +9,7 @@ import "github.com/gin-gonic/gin"
 
 func main() {
 	r := gin.Default()
-	r.GET("/ping1", func(context *gin.Context) {
+	r.GET("/ping", func(context *gin.Context) {
 		context.JSON(200, gin.H{
 			"code": 200,
 			"data": context.Request.URL.Path,
