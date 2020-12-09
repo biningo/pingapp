@@ -26,14 +26,7 @@ jobs:
         run: go test -v .
       - name: go build
         run: |
-          go build main.go
-      - name: git commit
-        run: |
-          git config --global user.email "biningo@yeah.net"
-          git config --global user.name "lyer"
-          git add .
-          git commit -m "build"
-          git push
+          go build main.go      
       - name: Push to GitHub Packages
         uses: docker/build-push-action@v1
         with:
