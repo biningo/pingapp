@@ -28,7 +28,7 @@ jobs:
         run: |
           go build main.go      
       - name: Push to GitHub Packages
-        uses: docker/build-push-action@v1
+        uses: docker/build-push-action@v2
         with:
           username: ${{ github.actor }}
           password: ${{ secrets.DOCKER_PKG }}
