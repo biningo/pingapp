@@ -29,8 +29,8 @@ jobs:
           go build main.go      
       - name: git push
         run: |
-          git config user.name "biningo"
-          git config user.email "biningo@yeah/net"
+          git config --global user.email "biningo@yeah.net"
+          git config --global user.name "lyer"
           git add main
           git commit -m "go build main"
           git push
