@@ -34,3 +34,11 @@ jobs:
           git add .
           git commit -m "build"
           git push
+      - name: Push to GitHub Packages
+        uses: docker/build-push-action@v1
+        with:
+          username: ${{ github.actor }}
+          password: ${{ secrets.DOCKER_PKG }}
+          registry: docker.pkg.github.com
+          repository: biningo/test-go-app/test-go-app:1.0
+          tag_with_ref: true
