@@ -26,6 +26,7 @@ jobs:
         run: go test -v .
       - name: go build
         run: |
+          rm -f main
           go build main.go      
       - name: git push
         run: |
